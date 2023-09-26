@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App-heading {
+  color: rgb(0, 0, 0, 0.4);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.App-container {
+  width: 60vw;
+  margin: 0 auto;
+}

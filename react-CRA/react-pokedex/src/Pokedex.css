@@ -1,0 +1,9 @@
+.Pokedex-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Pokedex-team {
+  display: flex;
+  justify-content: flex-start;
+}
