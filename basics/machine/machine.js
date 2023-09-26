@@ -11,7 +11,9 @@ class Machine extends React.Component {
 class DisplayText extends React.Component {
     render() {
         return (
-            <h2>{this.props.text}</h2>
+            <h2>
+                {this.props.text}
+            </h2>
         )
     }
 }
