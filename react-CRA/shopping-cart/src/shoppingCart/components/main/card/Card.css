@@ -1,0 +1,37 @@
+.Card {
+  border: 2.5px solid black;
+  width: 230px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.Card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.Card-content {
+  padding: 8px;
+}
+
+.Card-cost-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 5px;
+}
+
+.Card-text-content {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.Card-price {
+  font-size: 25px;
+  font-weight: 700;
+}

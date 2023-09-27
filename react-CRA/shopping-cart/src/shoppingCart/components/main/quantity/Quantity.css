@@ -1,0 +1,24 @@
+.Quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vw;
+}
+
+.Quantity-no,
+.Quantity-plus,
+.Quantity-minus {
+  font-size: 18px;
+  padding: 5px;
+  background-color: white;
+  border: none;
+}
+
+.Quantity-plus {
+  color: green;
+  cursor: pointer;
+}
+
+.Quantity-minus {
+  color: red;
+  cursor: pointer;
+}

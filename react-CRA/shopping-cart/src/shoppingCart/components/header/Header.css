@@ -1,0 +1,15 @@
+.Header {
+  background-color: rgb(49, 49, 49);
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header-title {
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  margin-left: 15px;
+}
