@@ -14,7 +14,7 @@ export default class Card extends Component {
           <div className="Card-description">{this.props.desc}</div>
           <div className="Card-cost-display">
             <div className="Card-price">{this.props.cost}</div>
-            <Quantity />
+            <Quantity id={this.props.id} />
           </div>
         </div>
       </div>

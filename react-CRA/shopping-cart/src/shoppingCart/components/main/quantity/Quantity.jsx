@@ -13,6 +13,7 @@ export default class Quantity extends Component {
     this.setState((prevState) => ({
       quantity: prevState.quantity + 1,
     }));
+    console.log(`${this.props.id} was clicked`);
   };
 
   handleMinusClick = () => {
@@ -21,6 +22,7 @@ export default class Quantity extends Component {
         quantity: prevState.quantity - 1,
       }));
     }
+    console.log(`${this.props.id} was clicked`);
   };
 
   render() {
