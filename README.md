@@ -6,3 +6,6 @@ Simple programs for beginners to get started with React JS
 
 ## 2) SHOPPING CART: 
 [DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/shopping-cart) &nbsp; || &nbsp; [PREVIEW](https://baka-shopping-cart.netlify.app/)
+
+## 3) TIC-TAC-TOE: 
+[DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/Tic-Tac-Toe) &nbsp; || &nbsp; [PREVIEW](https://tic-tac-toe-4124.netlify.app/)
