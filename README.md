@@ -9,3 +9,9 @@ Simple programs for beginners to get started with React JS
 
 ## 3) TIC-TAC-TOE: 
 [DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/Tic-Tac-Toe) &nbsp; || &nbsp; [PREVIEW](https://tic-tac-toe-4124.netlify.app/)
+
+## 4) DICE ROLLING: 
+[DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/dice-exercise) &nbsp; || &nbsp; [PREVIEW](https://baka-roll-dice.netlify.app/)
+
+
+
