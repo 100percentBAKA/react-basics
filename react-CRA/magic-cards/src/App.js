@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './component/SingleCard'
 
@@ -32,6 +32,20 @@ function App() {
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
+
+  // * Reset Turns
+  const resetTurns = () => {
+    setChoiceOne(null)
+    setChoiceTwo(null)
+  }
+
+  // ! useEffect takes in a callback function and dependencies (list) as arguments 
+  useEffect(() => {
+    if (choiceOne && choiceTwo) {
+      console.log('Both Cards selected')
+    }
+  },
+    [choiceOne, choiceTwo])
 
   return (
     <div className="App">
