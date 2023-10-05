@@ -1,23 +1,24 @@
-import React, { Component } from "react";
 import "../component/SingleCard.css";
 
-export default class SingleCard extends Component {
-  render() {
-    return (
-      <div className="App-card" key={this.props.id}>
-        <div>
-          <img
-            src={this.props.src}
-            className="App-card-front"
-            alt="card front"
-          />
-          <img
-            src={`${process.env.PUBLIC_URL}/img/cover.png`}
-            className="App-card-back"
-            alt="card back"
-          />
-        </div>
+// ! In the below component, we pass individual props as arguments by using destructuring of object
+function SingleCard({ card, handleChoice }) {
+  const handleClick = () => {
+    handleChoice(card);
+  };
+
+  return (
+    <div className="App-card">
+      <div>
+        <img src={card.src} className="App-card-front" alt="card front" />
+        <img
+          src={`${process.env.PUBLIC_URL}/img/cover.png`}
+          className="App-card-back"
+          alt="card back"
+          onClick={handleClick}
+        />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default SingleCard;

@@ -15,6 +15,8 @@ function App() {
 
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
+  const [choiceOne, setChoiceOne] = useState(null)
+  const [choiceTwo, setChoiceTwo] = useState(null)
 
   //* Shuffle Cards
   const shuffleCards = () => {
@@ -26,7 +28,10 @@ function App() {
     setTurns(0)
   }
 
-  console.log(cards, turns)
+  // console.log(cards, turns)
+  const handleChoice = (card) => {
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+  }
 
   return (
     <div className="App">
@@ -42,7 +47,11 @@ function App() {
             //     <img src={`${process.env.PUBLIC_URL}/img/cover.png`} className='App-card-back' alt='card back' />
             //   </div>
             // </div>
-            <SingleCard src={card.src} id={card.id} />
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+            />
           ))
         }
       </div>
@@ -50,4 +59,25 @@ function App() {
   );
 }
 
-export default App
+// export default App
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Magic Game</h1>
+//       <button>New Game</button>
+
+//       <div className='App-card-grid'>
+//         {
+//           cardImages.map(card => (
+//             <div>
+//               <img src={card.src} alt='puzzle' />
+//             </div>
+//           ))
+//         }
+//       </div>
+//     </div>
+//   );
+// }
+
+export default App;
