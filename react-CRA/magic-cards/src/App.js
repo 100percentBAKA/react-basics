@@ -3,12 +3,12 @@ import './App.css'
 import SingleCard from './component/SingleCard'
 
 const cardImages = [
-  { "src": "/img/helmet-1.png" },
-  { "src": "/img/potion-1.png" },
-  { "src": "/img/ring-1.png" },
-  { "src": "/img/scroll-1.png" },
-  { "src": "/img/shield-1.png" },
-  { "src": "/img/sword-1.png" },
+  { "src": "/img/helmet-1.png", matched: false },
+  { "src": "/img/potion-1.png", matched: false },
+  { "src": "/img/ring-1.png", matched: false },
+  { "src": "/img/scroll-1.png", matched: false },
+  { "src": "/img/shield-1.png", matched: false },
+  { "src": "/img/sword-1.png", matched: false },
 ]
 
 function App() {
@@ -31,21 +31,57 @@ function App() {
   // console.log(cards, turns)
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+    // ! Passing the card object, we might need to compare the src property to check for card match 
   }
 
   // * Reset Turns
   const resetTurns = () => {
     setChoiceOne(null)
     setChoiceTwo(null)
+    setTurns((prevTurns) => prevTurns + 1)
   }
 
   // ! useEffect takes in a callback function and dependencies (list) as arguments 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
-      console.log('Both Cards selected')
+      if (choiceOne.src === choiceTwo.src) {
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.src === choiceOne.src) {
+              return { ...card, matched: true }
+            }
+            else {
+              return card
+            }
+          })
+        })
+        resetTurns()
+      }
+      else {
+        setTimeout(() => resetTurns(), 1000)
+      }
     }
   },
     [choiceOne, choiceTwo])
+
+  // useEffect(() => {
+  //   if (choiceOne && choiceTwo) {
+  //     if (choiceOne.src === choiceTwo.src) {
+  //       setCards(prevCards => {
+  //         return prevCards.map(card => {
+  //           if (card.src === choiceOne.src) {
+  //             return { ...card, matched: true }
+  //           }
+  //           return card; // * Make sure to return the card even if it doesn't match
+  //         });
+  //       });
+  //     }
+  //     setTurns(resetTurns(), 1000)
+  //   }
+  // }, [choiceOne, choiceTwo]);
+
+
+  console.log(cards)
 
   return (
     <div className="App">
@@ -65,6 +101,8 @@ function App() {
               key={card.id}
               card={card}
               handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+            // ! If the user has previously matched the cards, we want them to stay flipped
             />
           ))
         }
@@ -73,25 +111,5 @@ function App() {
   );
 }
 
-// export default App
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>Magic Game</h1>
-//       <button>New Game</button>
-
-//       <div className='App-card-grid'>
-//         {
-//           cardImages.map(card => (
-//             <div>
-//               <img src={card.src} alt='puzzle' />
-//             </div>
-//           ))
-//         }
-//       </div>
-//     </div>
-//   );
-// }
 
 export default App;

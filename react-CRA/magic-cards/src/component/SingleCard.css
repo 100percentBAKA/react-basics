@@ -3,5 +3,15 @@
 }
 
 .App-card img {
-  border: 1px solid white;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.App-card .App-card-front {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+
+.App-card-flipped .App-card-front {
+  transform: rotateY(0deg);
 }
