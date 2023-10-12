@@ -15,3 +15,13 @@
 .App-card-flipped .App-card-front {
   transform: rotateY(0deg);
 }
+
+.App-card .App-card-back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.App-card-flipped .App-card-back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}

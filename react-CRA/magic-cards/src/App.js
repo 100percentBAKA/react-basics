@@ -17,6 +17,7 @@ function App() {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
+  const [disable, setDisable] = useState(false)
 
   //* Shuffle Cards
   const shuffleCards = () => {
@@ -24,6 +25,8 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
 
+    setChoiceOne(null)
+    setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
   }
@@ -39,11 +42,15 @@ function App() {
     setChoiceOne(null)
     setChoiceTwo(null)
     setTurns((prevTurns) => prevTurns + 1)
+    setDisable(false)
   }
 
   // ! useEffect takes in a callback function and dependencies (list) as arguments 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
+
+      setDisable(true)
+
       if (choiceOne.src === choiceTwo.src) {
         setCards(prevCards => {
           return prevCards.map(card => {
@@ -80,8 +87,10 @@ function App() {
   //   }
   // }, [choiceOne, choiceTwo]);
 
-
-  console.log(cards)
+  // ! Starting a new game 
+  useEffect(() => {
+    shuffleCards()
+  }, [])
 
   return (
     <div className="App">
@@ -102,11 +111,14 @@ function App() {
               card={card}
               handleChoice={handleChoice}
               flipped={card === choiceOne || card === choiceTwo || card.matched}
-            // ! If the user has previously matched the cards, we want them to stay flipped
+              // ! If the user has previously matched the cards, we want them to stay flipped
+              disabled={disable}
+            // ! If disabled state is set to true, click is disabled 
             />
           ))
         }
       </div>
+      <p>Turns: {turns}</p>
     </div>
   );
 }
