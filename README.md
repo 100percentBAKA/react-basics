@@ -14,4 +14,11 @@ Simple programs for beginners to get started with React JS
 [DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/dice-exercise) &nbsp; || &nbsp; [PREVIEW](https://baka-roll-dice.netlify.app/)
 
 
+## 5) MAGIC-CARDS: 
+[DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/magic-cards) &nbsp; || &nbsp; [PREVIEW](https://baka-magic-cards.netlify.app/)
+
+
+
+
+
 
