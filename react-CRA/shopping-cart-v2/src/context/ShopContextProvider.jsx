@@ -5,14 +5,13 @@ export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {}; // Cart --> Object
-  for (let i = 1; i <= PRODUCTS.length; i++) {
+  for (let i = 1; i < PRODUCTS.length + 1; i++) {
     cart[i] = 0; // Initial quantity of the items set to 0
   }
-
   return cart;
 };
 
-export const ShopContextProvider = () => {
+export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   // * ADD TO CART
@@ -32,15 +31,18 @@ export const ShopContextProvider = () => {
   };
 
   // * FINAL CONTEXT
-  const ContextValue = {
+  const contextValue = {
     cartItems,
     addToCart,
     removeFromCart,
   };
 
+  console.log(cartItems);
+
   return (
-    <ShopContext.Provider>
-      {/* Context will be returned here */}
+    // * CONTEXT WILL BE PASSED AS VALUE
+    <ShopContext.Provider value={contextValue}>
+      {props.children}
     </ShopContext.Provider>
   );
 };
