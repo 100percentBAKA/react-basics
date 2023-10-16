@@ -1,0 +1,34 @@
+.CartProduct {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 120px;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.CartProduct img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.CartProduct-detail {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.CartProduct-quantity-handler {
+  width: 100%;
+  display: flex;
+}
+
+.CartProduct-quantity-handler input {
+  width: 8%;
+}
