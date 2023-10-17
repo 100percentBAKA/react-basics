@@ -5,9 +5,14 @@
   height: 120px;
   width: 400px;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid black;
   margin-bottom: 20px;
+}
+
+.CartProduct .CartProduct-title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .CartProduct img {
