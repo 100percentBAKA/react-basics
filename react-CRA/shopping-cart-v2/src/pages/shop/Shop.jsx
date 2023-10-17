@@ -1,4 +1,3 @@
-import React from "react";
 import { PRODUCTS } from "../../Product";
 import Product from "./Product";
 import "./Shop.css";
