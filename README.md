@@ -6,6 +6,9 @@ Simple programs for beginners to get started with React JS
 
 
 ## Very simple Projects
+### 0) MODAL WINDOW: 
+[DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/modal-window) &nbsp; || &nbsp; [PREVIEW](https://baka-modal-window.netlify.app/)
+
 ### 1) POKEDEX || SIMPLE POKEGAME: 
 [DIR](https://github.com/100percentBAKA/react-basics/tree/main/react-CRA/react-pokedex) &nbsp; || &nbsp; [PREVIEW](https://baka-pokedex.netlify.app/)
 
