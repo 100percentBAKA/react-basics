@@ -1,9 +1,14 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+// * CONTEXT API
+import { ShopContextProvider } from './context/ShopContextProvider';
+
+// * COMPONENTS 
 import Navbar from './components/Navbar';
 import Cart from './pages/cart/Cart';
 import Shop from './pages/shop/Shop';
-import { ShopContextProvider } from './context/ShopContextProvider';
+
 
 function App() {
   return (
