@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { PRODUCTS } from "../../../Product.js";
 import CardShop from "../../components/cardShop/CardShop.jsx";
