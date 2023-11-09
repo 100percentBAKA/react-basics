@@ -69,9 +69,9 @@ function App() {
         </div>
 
         <Container sx={{ marginTop: "5vh" }}>
-          <Grid container spacing={3} justifyContent="center" direction="row">
-            <Grid item xs={6}>
-              <Card sx={{ maxWidth: 345 }}>
+          <Grid container spacing={3} direction="row">
+            <Grid item xs={12}>
+              <Card sx={{ maxWidth: 800 }}>
                 <CardHeader
                   avatar={
                     <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -89,9 +89,31 @@ function App() {
                 />
                 <CardContent>
                   <Typography variant="body1">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Eligendi veritatis impedit corrupti rem quae qui, laboriosam
-                    hic iusto reprehenderit maxime.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quam labore nihil dolorem odio tempora qui, sunt rerum ad,
+                    iusto animi maxime nisi repellendus, quae ut delectus
+                    impedit voluptate voluptatibus mollitia laboriosam nesciunt.
+                    Vel suscipit atque ea in eos aspernatur labore odit,
+                    consequatur, officia dicta quam. Reiciendis necessitatibus,
+                    ratione aliquam nostrum expedita voluptas illo perferendis
+                    numquam. Cupiditate doloremque, ipsam deserunt voluptatem,
+                    maiores debitis placeat voluptas consequatur nulla fugit
+                    explicabo dolores provident totam magni deleniti, asperiores
+                    unde ducimus! Illo excepturi, fugiat assumenda distinctio
+                    rem laboriosam voluptas dignissimos, nam laudantium,
+                    similique eius quo ipsam nemo magnam doloremque deserunt
+                    veniam minus ex. Ex commodi repellendus cupiditate sit
+                    laborum repudiandae voluptatibus illum odit amet
+                    consequuntur quidem molestiae, nisi fugit ratione quas quod
+                    asperiores modi culpa pariatur totam! Inventore at,
+                    necessitatibus iusto rerum alias fuga facere ratione
+                    voluptatem est eveniet labore, sequi unde! Porro voluptatem
+                    id eum blanditiis facere, voluptatibus distinctio illum
+                    culpa, similique explicabo dolorum rerum nisi, eligendi
+                    consectetur illo cum sint dicta esse quidem vel? Eius
+                    laboriosam impedit saepe doloribus expedita exercitationem
+                    doloremque, aut eveniet alias. Omnis pariatur voluptatibus
+                    iusto, in voluptas magni fugiat est neque quas aut dolorem
                   </Typography>
                 </CardContent>
               </Card>
