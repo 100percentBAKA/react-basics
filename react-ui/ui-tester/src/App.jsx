@@ -12,9 +12,7 @@ import {
   CardHeader,
   CardMedia,
   CardContent,
-  Collapse,
   Avatar,
-  CardActions,
 } from "@mui/material";
 import { PhotoCamera } from "@mui/icons-material";
 
